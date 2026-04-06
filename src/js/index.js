@@ -12,7 +12,7 @@ class Product{
         console.log(`Product: ${this.name}`);
         console.log(`Price: $${this.price.toFixed(2)}`);
         console.log(`Total with tax: $${this.calculateTotal(salesTax).toFixed(2)}`)
-               
+        
     }
 
     calculateTotal (salesTax){
