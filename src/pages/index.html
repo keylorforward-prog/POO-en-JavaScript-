@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>POO – Programación Orientada a Objetos</title>
+<link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=Syne:wght@400;700;800&display=swap" rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+<link rel="stylesheet" href="../styles/index.css">
+</head>
+<body>
+
+<!-- HEADER -->
+<header class="px-4 px-md-5 py-5 border-bottom">
+  <div class="tag mb-3">APUNTES · POO</div>
+  <h1>Programación<br><span>Orientada a Objetos</span></h1>
+  <p class="subtitle mt-3">Cada objeto es una caja que tiene cosas dentro — datos y acciones organizados juntos.</p>
+</header>
+
+<!-- GRID DE CARDS -->
+<div class="container-fluid px-0">
+  <div class="row g-0 border-top" id="grid">
+
+    <div class="col-12 col-md-6 col-lg-4 card-wrap">
+      <div class="card h-100">
+        <div class="card-num">01 — CONCEPTO BASE</div>
+        <span class="card-icon">📦</span>
+        <h2 class="accent">Clase / Objeto</h2>
+        <div class="accent-line" style="background:var(--accent)"></div>
+        <p>La <strong>clase</strong> es el molde. El <strong>objeto</strong> es lo que se construye con ese molde.</p>
+        <div class="badge-list mt-3">
+          <span class="badge-custom" style="border-color:var(--accent);color:var(--accent)">Molde = Clase</span>
+          <span class="badge-custom" style="border-color:#555;color:#999">Resultado = Objeto</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-12 col-md-6 col-lg-4 card-wrap">
+      <div class="card h-100">
+        <div class="card-num">02 — DATOS</div>
+        <span class="card-icon">🚗</span>
+        <h2 style="color:var(--accent2)">Atributos</h2>
+        <div class="accent-line" style="background:var(--accent2)"></div>
+        <p>Son las <strong>características</strong> del objeto. Describen cómo es.</p>
+        <div class="badge-list mt-3">
+          <span class="badge-custom" style="border-color:var(--accent2);color:var(--accent2)">Color = Rojo</span>
+          <span class="badge-custom" style="border-color:var(--accent2);color:var(--accent2)">Marca = Toyota</span>
+          <span class="badge-custom" style="border-color:var(--accent2);color:var(--accent2)">Velocidad = 0</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-12 col-md-6 col-lg-4 card-wrap">
+      <div class="card h-100">
+        <div class="card-num">03 — ACCIONES</div>
+        <span class="card-icon">⚙️</span>
+        <h2 style="color:var(--accent3)">Métodos</h2>
+        <div class="accent-line" style="background:var(--accent3)"></div>
+        <p>Son las <strong>funciones</strong> del objeto. Lo que puede <em>hacer</em>.</p>
+        <div class="badge-list mt-3">
+          <span class="badge-custom" style="border-color:var(--accent3);color:var(--accent3)">acelerar()</span>
+          <span class="badge-custom" style="border-color:var(--accent3);color:var(--accent3)">frenar()</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-12 col-md-6 col-lg-4 card-wrap">
+      <div class="card h-100">
+        <div class="card-num">04 — SEGURIDAD</div>
+        <span class="card-icon">🔒</span>
+        <h2 style="color:var(--accent4)">Encapsulación</h2>
+        <div class="accent-line" style="background:var(--accent4)"></div>
+        <p>Oculta los datos para que no se modifiquen directamente. Se accede a ellos solo mediante métodos.</p>
+        <div class="badge-list mt-3">
+          <span class="badge-custom" style="border-color:var(--accent3);color:var(--accent3)">velocidad = -100 ❌</span>
+          <span class="badge-custom" style="border-color:var(--accent2);color:var(--accent2)">frenar() ✅</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-12 col-md-6 col-lg-4 card-wrap">
+      <div class="card h-100">
+        <div class="card-num">05 — CREAR OBJETO</div>
+        <span class="card-icon">🏭</span>
+        <h2 class="accent">Instanciar</h2>
+        <div class="accent-line" style="background:var(--accent)"></div>
+        <p>Instanciar = tomar la clase (molde) y crear un objeto con sus propios valores.</p>
+        <pre class="code-block mt-3"><span class="kw">const</span> miCarro = <span class="kw">new</span> <span class="cls">Carro</span>(<span class="str">"Rojo"</span>, <span class="str">"Toyota"</span>);</pre>
+      </div>
+    </div>
+
+    <div class="col-12 col-md-6 col-lg-4 card-wrap">
+      <div class="card h-100">
+        <div class="card-num">06 — INICIALIZAR</div>
+        <span class="card-icon">🔧</span>
+        <h2 style="color:var(--accent2)">Constructor</h2>
+        <div class="accent-line" style="background:var(--accent2)"></div>
+        <p>Método especial que se ejecuta al crear el objeto. Le da los valores iniciales.</p>
+        <pre class="code-block mt-3"><span class="fn">constructor</span>(color, marca) {
+  <span class="kw">this</span>.color = color;
+  <span class="kw">this</span>.marca = marca;
+}</pre>
+      </div>
+    </div>
+
+    <div class="col-12 col-md-6 col-lg-4 card-wrap">
+      <div class="card h-100">
+        <div class="card-num">07 — ORGANIZACIÓN</div>
+        <span class="card-icon">🧩</span>
+        <h2 style="color:var(--accent3)">Modularidad</h2>
+        <div class="accent-line" style="background:var(--accent3)"></div>
+        <p>Dividir el programa en partes pequeñas. Cada parte tiene una función específica.</p>
+        <div class="badge-list mt-3">
+          <span class="badge-custom" style="border-color:#555;color:#aaa">carro.js</span>
+          <span class="badge-custom" style="border-color:#555;color:#aaa">motor.js</span>
+          <span class="badge-custom" style="border-color:#555;color:#aaa">ruedas.js</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- CARD WIDE -->
+    <div class="col-12 card-wrap">
+      <div class="card">
+        <div class="card-num">08 — EJEMPLO COMPLETO</div>
+        <span class="card-icon">💻</span>
+        <h2 class="accent">Todo junto en código</h2>
+        <div class="accent-line" style="background:var(--accent)"></div>
+
+        <div class="row g-4 mt-1">
+          <div class="col-12 col-lg-6">
+            <pre class="code-block"><span class="kw">class</span> <span class="cls">Carro</span> {
+  <span class="fn">constructor</span>(color, marca) {
+    <span class="kw">this</span>.color = color;
+    <span class="kw">this</span>.marca = marca;
+    <span class="kw">this</span>.#velocidad = <span class="str">0</span>;
+  }
+
+  <span class="fn">acelerar</span>() { <span class="kw">this</span>.#velocidad += <span class="str">10</span>; }
+  <span class="fn">frenar</span>()   { <span class="kw">this</span>.#velocidad -= <span class="str">10</span>; }
+  <span class="fn">info</span>()     { console.<span class="fn">log</span>(<span class="str">`${<span class="kw">this</span>.marca} → ${<span class="kw">this</span>.#velocidad} km/h`</span>); }
+}
+
+<span class="kw">const</span> miCarro = <span class="kw">new</span> <span class="cls">Carro</span>(<span class="str">"Rojo"</span>, <span class="str">"Toyota"</span>);
+miCarro.<span class="fn">acelerar</span>();
+miCarro.<span class="fn">info</span>(); <span class="cm">// Toyota → 10 km/h</span></pre>
+          </div>
+          <div class="col-12 col-lg-6">
+            <table class="table-custom w-100">
+              <thead>
+                <tr>
+                  <th>CONCEPTO</th>
+                  <th>EN EL CÓDIGO</th>
+                  <th>QUÉ ES</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr><td style="color:var(--accent)">Clase</td><td><code>class Carro</code></td><td>El molde</td></tr>
+                <tr><td style="color:var(--accent2)">Atributos</td><td><code>this.color</code></td><td>Datos del objeto</td></tr>
+                <tr><td style="color:var(--accent3)">Métodos</td><td><code>acelerar()</code></td><td>Lo que puede hacer</td></tr>
+                <tr><td style="color:var(--accent4)">Encapsulación</td><td><code>#velocidad</code></td><td>Dato privado</td></tr>
+                <tr><td style="color:var(--accent)">Instancia</td><td><code>new Carro()</code></td><td>Crear el objeto</td></tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<!-- FOOTER -->
+<footer class="d-flex justify-content-between flex-wrap gap-2 px-4 px-md-5 py-4 border-top">
+  <span>POO · Programación Orientada a Objetos</span>
+  <span>Clases · Atributos · Métodos · Encapsulación · Constructor · Modularidad</span>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script src="../js/index.js"></script>
+</body>
+</html>
